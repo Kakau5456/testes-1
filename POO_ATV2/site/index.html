@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca Unigran</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/POO_ATV2/site/style.css">
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#">Biblioteca Unigran</a>
+
+            <div class="navbar-nav">
+                <a class="nav-link active" href="#">Início</a>
+                <a class="nav-link" href="#cadastro">Cadastrar</a>
+                <a class="nav-link" href="#materiais">Materiais</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+
+        <header class="text-center mb-5">
+            <h1 class="text-success">Biblioteca Unigran</h1>
+            <p class="text-secondary">
+                Sistema de gerenciamento de livros e revistas
+            </p>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+
+                <div class="input-group mb-3">
+                    <input
+                        type="text"
+                        id="pesquisa"
+                        class="form-control"
+                        placeholder="Pesquisar livro ou revista..."
+                    >
+
+                    <button type="button" id="btnPesquisar" class="btn btn-success">
+                        Pesquisar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <main class="container mt-5" id="cadastro">
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow">
+
+                    <div class="card-header bg-success text-white">
+                        <h4 class="mb-0">Cadastrar material</h4>
+                    </div>
+
+                    <div class="card-body">
+
+                        <form id="formCadastro">
+
+                            <div class="mb-3">
+                                <label for="titulo" class="form-label">
+                                    Título
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="titulo"
+                                    class="form-control"
+                                    placeholder="Digite o título"
+                                    required
+                                >
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="ano" class="form-label">
+                                    Ano de publicação
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="ano"
+                                    class="form-control"
+                                    placeholder="Ex: 2024"
+                                    min="0"
+                                    required
+                                >
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="tipo" class="form-label">
+                                    Tipo de material
+                                </label>
+
+                                <select id="tipo" class="form-select" required>
+                                    <option value="">Selecione</option>
+                                    <option value="Livro">Livro</option>
+                                    <option value="Revista">Revista</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-success">
+                                Cadastrar
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <section class="container mt-5 mb-5" id="materiais">
+
+        <h2 class="text-center mb-4">Materiais cadastrados</h2>
+
+        <div class="card shadow">
+            <div class="card-body">
+
+                <div class="table-responsive">
+
+                    <table class="table table-striped table-hover">
+
+                        <thead class="table-success">
+                            <tr>
+                                <th>ID</th>
+                                <th>Título</th>
+                                <th>Ano</th>
+                                <th>Tipo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="listaMateriais">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/POO_ATV2/site/script.js"></script>
+
+</body>
+</html>
